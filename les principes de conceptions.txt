@@ -1,0 +1,45 @@
+Principes RESPECTÉS :
+Principe de Responsabilité Unique (SRP) :
+
+Chaque classe a une responsabilité bien définie
+
+CoursBuilder gère seulement la construction
+
+Gestionnaire gère les observateurs
+
+Decorator gère l'extension des fonctionnalités
+
+Principe Ouvert/Fermé (OCP) :
+
+Le système est ouvert à l'extension (Decorator, nouveaux Observers)
+
+Fermé à la modification (on étend sans modifier le code existant)
+
+Principe de Ségrégation des Interfaces (ISP) :
+
+ICours définit une interface minimale et cohérente
+
+Les interfaces sont spécifiques à leurs clients
+
+Principe d'Inversion des Dépendances (DIP) :
+
+Dépendances sur des abstractions (ICours, Observer)
+
+Pas de dépendances directes entre classes concrètes
+
+Principes POTENTIELLEMENT VIOLES :
+Principe de Substitution de Liskov (LSP) :
+
+Risque potentiel si les décorateurs modifient le comportement de base des méthodes
+
+Si CoursEnLigne.getDescription() ne respecte pas le contrat de ICours, cela violerait LSP
+
+Principe de Responsabilité Unique :
+
+La classe Gestionnaire pourrait avoir trop de responsabilités si elle gère à la fois :
+
+La liste des cours
+
+Le pattern Observer
+
+La logique métier des modifications

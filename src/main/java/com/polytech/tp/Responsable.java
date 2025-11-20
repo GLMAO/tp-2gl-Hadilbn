@@ -7,7 +7,7 @@ public class Responsable {
         this.nom = nom;
     }
 
-    
+    @override 
     public void update(String message) {
         System.out.println("Notification pour le responsable " + nom + " : " + message);
     }
